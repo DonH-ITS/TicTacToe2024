@@ -13,7 +13,10 @@
                 <!-- Content added here at runtime -->
 
             </Grid>
-
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Size: " VerticalOptions="Center" />
+                <Entry x:Name="GridSize" Placeholder="00" Keyboard="Numeric" Text="3" />
+            </HorizontalStackLayout>
             <Button x:Name="StartBtn"  Text="Start Game" Clicked="StartBtn_Clicked" WidthRequest="150"/>
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Label Text="Row: " VerticalOptions="Center" />
