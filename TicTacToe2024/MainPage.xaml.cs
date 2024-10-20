@@ -119,6 +119,8 @@ namespace TicTacToe2024
             }
         }
 
+
+        /* Taking out BtnMove_Clicked as clicking on the squares is better anyway
         private void BtnMove_Clicked(object sender, EventArgs e) {
             int row, column;
             //Try Parse is another way to convert from string to integer, it checks whether the parse can work first instead of just crashing
@@ -153,6 +155,7 @@ namespace TicTacToe2024
                 }
             }
         }
+        */
 
         private void FinishGame(int which) {
             if (which != 3) {

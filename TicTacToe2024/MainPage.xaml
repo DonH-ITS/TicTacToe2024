@@ -18,6 +18,8 @@
                 <Entry x:Name="GridSize" Placeholder="00" Keyboard="Numeric" Text="3" />
             </HorizontalStackLayout>
             <Button x:Name="StartBtn"  Text="Start Game" Clicked="StartBtn_Clicked" WidthRequest="150"/>
+            
+            <!-- This is redundant as clicking on the squares works much better anyway
             <HorizontalStackLayout HorizontalOptions="Center">
                 <Label Text="Row: " VerticalOptions="Center" />
                 <Entry x:Name="EntryR" Placeholder="00" Keyboard="Numeric" />
@@ -27,7 +29,7 @@
                   Margin="4, 1, 1, 1"
                   Clicked="BtnMove_Clicked"/>
             </HorizontalStackLayout>
-
+            -->
 
         </VerticalStackLayout>
     </ScrollView>
