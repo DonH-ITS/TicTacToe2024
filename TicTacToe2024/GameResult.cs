@@ -12,6 +12,7 @@
             Result = result;
         }
 
+        // The Json Deserialise requires a 0-argument constructor or else it will crash
         public GameResult() {
 
         }
