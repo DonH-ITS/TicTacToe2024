@@ -4,20 +4,33 @@
              x:Class="TicTacToe2024.MainPage"
              Title="Tic Tac Toe">
 
-    <ScrollView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="View Results" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+            <ScrollView>
         <VerticalStackLayout x:Name="MainLayout" VerticalOptions="Start">
-            <Label x:Name="whichplayerlabel" Text="Click Start Game to Begin"/>
+            <Grid x:Name="TopGrid" ColumnDefinitions="*,2*" RowDefinitions="*">
+                
+                <Label x:Name="whichplayerlabel" HorizontalOptions="Start"  Text="Click Start Game to Begin"/>
+                <HorizontalStackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="End">
+                <Label Text="Use Drawing" HorizontalOptions="End"></Label>
+                <Switch x:Name="shapesSwitch" HorizontalOptions="End" Toggled="coloursorXSwitch_Toggled" />
+                </HorizontalStackLayout>
+            </Grid>
+            
             <Grid x:Name="GridPageContent" BackgroundColor="CornflowerBlue"
     HeightRequest="300" WidthRequest="300"
     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" RowSpacing="6" ColumnSpacing="6" Padding="6">
                 <!-- Content added here at runtime -->
 
             </Grid>
-            <HorizontalStackLayout HorizontalOptions="Center">
+            <HorizontalStackLayout HorizontalOptions="Center" x:Name="GridSizeStack">
                 <Label Text="Size: " VerticalOptions="Center" />
                 <Entry x:Name="GridSize" Placeholder="00" Keyboard="Numeric" Text="3" />
             </HorizontalStackLayout>
             <Button x:Name="StartBtn"  Text="Start Game" Clicked="StartBtn_Clicked" WidthRequest="150"/>
+       
             
             <!-- This is redundant as clicking on the squares works much better anyway
             <HorizontalStackLayout HorizontalOptions="Center">
